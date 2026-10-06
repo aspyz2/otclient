@@ -63,6 +63,15 @@ if ENABLE_SERVERS then
     --
     Servers_init = {
 
+        -- OT Lab: login-server do Canary em Docker (ot-lab/infra), protocolo 15.25
+        ["http://127.0.0.1:8088/login"] = {
+            port = 8088,
+            protocol = 1525,
+            httpLogin = true,
+            useAuthenticator = false
+        },
+
+        --[[ OT Lab: exemplos do upstream desativados para o servidor do lab ser o único (escolha determinística)
         -- Local login server
         ---
         -- Configuration for local login server.
@@ -94,6 +103,7 @@ if ENABLE_SERVERS then
             protocol = 860,
             httpLogin = false
         }
+        ]]
     }
 end
 
