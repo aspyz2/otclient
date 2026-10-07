@@ -130,6 +130,12 @@ function mapController:onGameStart()
         loadFnc(minimapFile)
     end
 
+    -- OT Lab: minimapa completo que vem com o cliente (gerado do TibiaMaps por ot-lab/tools/minimap_to_otmm.py).
+    -- Carrega depois do arquivo do jogador para que blocos ja explorados nao fiquem parciais.
+    if otmm and g_resources.fileExists('/data/minimap.otmm') then
+        g_minimap.loadOtmm('/data/minimap.otmm')
+    end
+
     self.ui.minimapBorder.minimap:load()
 end
 
