@@ -4,7 +4,8 @@ game
   typing-icon: /images/game/console/typing
   
   map
-    viewport: 8 6
+    // OT Lab: +4 sqm; precisa bater com MAP_MAX_CLIENT_VIEW_PORT do servidor (ot-lab/server/patches)
+    viewport: 12 10
     extended-view-ui: false
     max-z: 15
     sea-floor: 7
